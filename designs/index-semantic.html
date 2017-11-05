@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/semantic.min.css">
+    <script src="styles/semantic.min.js"></script>
+    <!---<link rel="stylesheet" type="text/css" href="style.css">--->
+<meta charset="utf-8">
+<style media="screen">
+  body {
+    color: darkslategray;
+  }
+  .button {
+    border-radius: 4px;
+    margin: 1em 0;
+  }
+  .button-primary {
+    background-color: #3A6BC3;
+  }
+  .table {
+    border: 1px solid #3A6BC3;
+  }
+  .title {
+    color: #3A6BC3;
+  }
+  .content {
+    color: #DE5E00;
+  }
+</style>
+<title></title>
+</head>
+<body>
+    <div class="text container">
+    <div class="pure-u-1"><h3 class="title">Welcome to STEM CEL!</h3></div>
+    <div class="pure-u-1"><p class="content">Enter your table number and the class you would like help with and a tutor will come to you.</p></div>
+    <table class="pure-u-1 pure-table pure-table-horizontal table">
+      <thead><tr>
+        <td>Table Number</td><td>Subject</td><td></td>
+      </tr></thead>
+      <tbody>
+        <tr>
+            <td><!--<label>Table #: </label>--><input type="text" id="table" placeholder="ex: Table 2"></td>
+            <td><!--<label>Subject: </label>--><input type="text" id="class" placeholder="ex: ENGR 8"></td>
+            <td><button class="pure-button pure-button-primary button" id="submit">Enter</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pure-u-1"><button class="pure-button button" id="clear">Clear Queue</button></div>
+    </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDwhjq3zSCLjGpXL1C4A51dlG0Hl9AaxTs",
+    authDomain: "tutor-notification-system.firebaseapp.com",
+    databaseURL: "https://tutor-notification-system.firebaseio.com",
+    storageBucket: "tutor-notification-system.appspot.com",
+    messagingSenderId: "889068192363"
+  };
+
+  firebase.initializeApp(config);
+</script>
+<script src="js.js"></script>
+</body>
+</html>

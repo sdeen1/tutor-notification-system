@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<title>Find a tutor!</title>
+</head>
+<body>
+    <div class="ui text container centered">
+    <div class="ui basic segment"><h2 class="title">Welcome to STEM CEL!</h2></div>
+    <div class="ui basic segment"><p class="content">Enter your table number and the class you would like help with and a tutor will come to you.</p></div>
+    <div id="error-message" class="ui negative message">
+      <i class="close icon"></i>
+    </div>
+    <table class="ui single line table">
+      <tbody>
+        <tr>
+          <td>Table Number</td><td>Subject</td><td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="table" placeholder="ex: Table 2"></td>
+            <td><input type="text" id="class" placeholder="ex: ENGR 8"></td>
+            <td><button class="ui primary button" id="submit">Enter</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div><button class="ui button" id="clear">Clear Queue</button></div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="styles/semantic.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDwhjq3zSCLjGpXL1C4A51dlG0Hl9AaxTs",
+    authDomain: "tutor-notification-system.firebaseapp.com",
+    databaseURL: "https://tutor-notification-system.firebaseio.com",
+    storageBucket: "tutor-notification-system.appspot.com",
+    messagingSenderId: "889068192363"
+  };
+
+  firebase.initializeApp(config);
+</script>
+<script src="js.js"></script>
+</body>
+</html>
